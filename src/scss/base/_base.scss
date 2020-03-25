@@ -1,0 +1,33 @@
+/*******************
+ *      BASE
+ *******************/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0; //auto
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+}
+a {
+  color: $dark;
+  text-decoration: none;
+  @include on-event {
+    color: $info;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  padding: 0 30px;
+  max-width: 1920px;
+}

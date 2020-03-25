@@ -1,0 +1,63 @@
+/* ***********************
+ *      FOOTER
+ *********************** */
+.main-footer {
+  .footer-head {
+    padding: 38px 0;
+    @extend .row, .justify-content-between, .mx-0;
+    a {
+      padding-left: 45px;
+      position: relative;
+      letter-spacing: 4px;
+      color: $dark;
+      @include fonts($font-text, 14px, 700);
+      @extend .text-center, .text-sm-right, .pr-0;
+      &::before {
+        content: "";
+        background-color: $primary;
+        width: 1px;
+        height: 40px;
+        left: 0;
+        // TODO: Cambiar top y tranforms, vertical center
+        transform: translate(0, -25%);
+        @extend .position-absolute;
+      }
+      i {
+        padding-left: 30px;
+      }
+    }
+    @media (max-width: 991.98px) {
+      padding: 30px 0;
+    }
+    @media (max-width: 767.98px) {
+      img {
+        padding-bottom: 10px;
+      }
+      a {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+    @media (max-width: 575.98px) {
+      padding: 20px 0;
+    }
+  }
+  .footer-end {
+    border-top: 2px solid $silver;
+    @extend .row, .mx-0, .py-xl-5, .py-lg-4, .py-3;
+    p {
+      color: $muted;
+      @include fonts($font-muted, 15px);
+      @extend .col-12, .col-md-8, .text-center, .text-md-left, .px-0;
+    }
+    .icons {
+      color: $dark;
+      @extend .col-12, .col-md-4, .text-center, .text-md-right, .px-0;
+      i {
+        padding-left: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+/// Regular font family
+/// @type List
+$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+
+$font-text: "Poppins", sans-serif;
+$font-muted: "Nunito", sans-serif;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace !default;
+
+/// black
+/// @type Color
+$black: #000;
+/// dark
+/// @type Color
+$dark: #1a1a1d;
+/// primary
+/// @type Color
+$primary: #b4d3d3;
+/// grey
+/// @type Color
+$secondary: #96969b;
+/// dark-silver muted
+/// @type Color
+$muted: #696970;
+$muted: #77777e !default;
+/// Copy text info
+/// @type Color
+$text-info: #87bbbc !default;
+/// Main brand color
+/// @type Color
+$brand-color: #e50050 !default;
+/// silver
+/// @type Color
+$silver: #f5f5f5;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: "/assets/" !default;

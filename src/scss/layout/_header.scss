@@ -1,0 +1,24 @@
+/* *******************
+ *      HEADER
+ ******************* */
+.main-header {
+  width: 100%;
+  z-index: 9999;
+  @extend .position-absolute;
+  .navbar {
+    @extend .navbar-light, .bg-transparent, .position-relative;
+
+    &-brand {
+      // @extend .order-2;
+    }
+    &-collapse {
+      @extend .collapse;
+    }
+    &-nav {
+      @extend .mr-auto;
+    }
+  }
+  .collapse {
+    // @extend .order-1;
+  }
+}

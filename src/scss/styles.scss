@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+@import "utilities/variables", "utilities/functions", "utilities/mixins";
+
+@import "vendors/normalize", "vendors/bootstrap", "vendors/fontawesome", "vendors/slick";
+
+@import "base/fonts", "base/base";
+
+@import "layout/header", "layout/footer";
+
+@import "components/button";
+
+@import "pages/home";
