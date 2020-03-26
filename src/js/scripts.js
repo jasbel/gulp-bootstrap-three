@@ -18,15 +18,29 @@
     distance: "30px",
     reset: true
   });
-  sr.reveal("a", {
-    duration: 1500,
-    origin: "top",
-    distance: "30px",
-    reset: true
-  });
+  // sr.reveal("a", {
+  //   duration: 1500,
+  //   origin: "left",
+  //   distance: "30px"
+  //   // reset: true
+  // });
 })();
 
 $(document).ready(function() {
+  //button Search animation
+  const input = document.getElementById("search-input");
+  const searchBtn = document.getElementById("search-btn");
+  const expand = () => {
+    searchBtn.classList.toggle("close");
+    input.classList.toggle("square");
+  };
+  searchBtn.addEventListener("click", expand);
+
+  //menu hamburguer
+  $(".navi").click(function() {
+    $(".menu, .navi").toggleClass("active");
+  });
+
   $(".slicksliders").slick({
     // prevArrow: false,
     // nextArrow: false,
@@ -51,7 +65,7 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 5000
   });
   $(".fads-play-slider").slick({
     prevArrow: false,
@@ -64,6 +78,6 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 5000
   });
 });

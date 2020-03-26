@@ -6,8 +6,12 @@
   @extend .position-relative;
 
   @media (max-width: 1199.98px) {
-    padding-top: 170px;
+    padding-top: 200px;
   }
+  @media (max-width: 991.98px) {
+    padding-top: 150px;
+  }
+
   @media (max-width: 575.98px) {
     padding-top: 80px;
   }
@@ -110,17 +114,19 @@
         white-space: pre-line;
       }
     }
-
     @media (max-width: 1199.98px) {
       h2 {
         font-size: 75px;
-        padding: 100px 0 0 30px;
+        padding: 15px 0 0 30px;
       }
       p {
         padding: 0 0 100px 30px;
       }
       a {
         display: none;
+      }
+      .hero-img {
+        right: 15px;
       }
     }
     @media (max-width: 575.98px) {
@@ -134,10 +140,7 @@
         padding-bottom: 0;
       }
       .hero-img {
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        position: relative;
+        right: 50px;
       }
     }
   }
@@ -207,7 +210,7 @@
       @extend .img-fluid;
     }
     @media (max-width: 1199.98px) {
-      width: 40%;
+      width: 50%;
     }
     @media (max-width: 575.98px) {
       display: none;
