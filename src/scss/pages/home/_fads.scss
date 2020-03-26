@@ -1,0 +1,235 @@
+/* *****************
+        FADS
+********************/
+.fads {
+  padding: 25px 0 127px;
+  @media (max-width: 991.98px) {
+    padding-bottom: 80px;
+  }
+  @media (max-width: 575.98px) {
+    padding: 10px 0 40px;
+  }
+  .rows {
+    padding: 0 $p-6;
+    @extend .row, .mx-0;
+    @media (max-width: 1199.98px) {
+      padding: 0;
+    }
+  }
+  &-boxes:nth-child(1) {
+    @extend .row, .col-lg-8, .px-0, .mx-0;
+    img {
+      width: 100%;
+      @extend .img-fluid;
+    }
+    @media (max-width: 991.98px) {
+      padding-right: 0;
+    }
+  }
+
+  &-boxes:nth-child(2) {
+    padding-left: 50px;
+    @extend .col-lg-4, .pr-0;
+    img {
+      padding-bottom: 34px;
+      width: 100%;
+      @extend .img-fluid;
+    }
+    p {
+      &:nth-of-type(1) {
+        margin-bottom: 22px;
+        line-height: 36px;
+        white-space: pre-line;
+        @include fonts($font-text, 24px, 500);
+      }
+      &:nth-of-type(2) {
+        color: $secondary;
+        @include fonts($font-muted, 16px, 300);
+      }
+    }
+    @media (max-width: 1199.98px) {
+      padding-left: 30px;
+      p:nth-of-type(1) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      padding: 15px 0;
+    }
+  }
+}
+
+.fads-box {
+  @extend .col-12, .mx-0;
+  &:nth-child(1) {
+    padding: 0 0 25px;
+    @extend .col-md-12, .row, .px-0;
+    div {
+      background-color: $primary;
+      @extend .mx-0;
+      &:first-child {
+        color: $white;
+        padding: 17% 0 0 60px;
+        @extend .col-12, .col-md-4, .order-2, .order-lg-1;
+        a {
+          color: $white;
+        }
+        img {
+          padding-bottom: 40px;
+          max-width: 32px;
+        }
+        p {
+          margin-bottom: 22px;
+          line-height: 48px;
+          white-space: pre-line;
+          @include fonts($font-text, 30px, 500);
+          &:last-child {
+            margin-bottom: 0;
+          }
+          span {
+            @include fonts($font-muted, 16px, 300);
+          }
+        }
+      }
+      &:last-child {
+        padding-left: 65px;
+        @extend .col-12, .col-md-8, .pr-0, .order-1, .order-lg-1;
+        .btn {
+          margin: 10px;
+          position: absolute;
+          right: 0;
+          background-color: $white;
+          padding: 18px 57px;
+          letter-spacing: 4px;
+          @include fonts($font-muted, 14px, 800);
+        }
+      }
+    }
+    @media (max-width: 1199.98px) {
+      padding-bottom: 15px;
+      div {
+        &:first-child {
+          padding: 15px;
+          i {
+            padding-bottom: 15px;
+          }
+          p {
+            font-size: 24px;
+            line-height: normal;
+            white-space: normal;
+            margin-bottom: 0;
+          }
+        }
+        &:last-child {
+          padding-left: 0;
+          .btn {
+            letter-spacing: 2px;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+    @media (max-width: 991.98px) {
+    }
+  }
+  &:nth-child(2) {
+    padding: 25px 25px 0 0;
+    @extend .col-lg-6;
+    img {
+      padding-bottom: 30px;
+    }
+    p {
+      &:nth-of-type(1) {
+        margin-bottom: 15px;
+        line-height: 36px;
+        white-space: pre-line;
+        @include fonts($font-text, 24px, 500);
+      }
+      &:nth-of-type(2) {
+        color: $secondary;
+        @include fonts($font-muted, 16px);
+        @extend .m-0;
+      }
+    }
+    @media (max-width: 1199.98px) {
+      padding: 15px 15px 0 0;
+      img {
+        padding-bottom: 10px;
+      }
+      p {
+        &:nth-of-type(1) {
+          line-height: normal;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  &:nth-child(3) {
+    padding: 25px 0 0 25px;
+    @extend .col-lg-6, .position-relative;
+    a {
+      color: $white;
+      margin-left: 25px;
+      padding: 10px 0 50px 40px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      letter-spacing: 4px;
+      @include fonts($font-muted, 14px, 800);
+      @extend .d-flex, .align-items-center;
+      div {
+        width: 90px;
+        height: 90px;
+        border: 2px solid $white;
+        border-radius: 50%;
+        margin-right: 30px;
+        @extend .d-flex, .align-items-center, .justify-content-center;
+      }
+      img {
+        max-width: 28px;
+      }
+    }
+
+    @media (max-width: 1199.98px) {
+      padding: 15px 0 0 15px;
+    }
+
+    @media (max-width: 991.98px) {
+      padding: 15px 0;
+    }
+  }
+}
+/* slider */
+.fads-slider {
+  .slick-dots {
+    bottom: 200px;
+    li {
+      button:before {
+        color: $white;
+        opacity: 0.5;
+      }
+      &.slick-active button:before {
+        font-size: 10px;
+        opacity: 1;
+      }
+    }
+  }
+}
+.fads-play-slider {
+  .slick-dots {
+    bottom: 50%;
+    left: 45%;
+    transform: rotate(90deg);
+    li {
+      button:before {
+        color: $white;
+        opacity: 0.5;
+      }
+      &.slick-active button:before {
+        font-size: 12px;
+        opacity: 1;
+      }
+    }
+  }
+}

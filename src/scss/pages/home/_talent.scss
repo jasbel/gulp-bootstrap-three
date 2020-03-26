@@ -1,0 +1,157 @@
+/* *****************
+        TALENT
+********************/
+.talent {
+  padding-top: 110px;
+  @extend .text-center;
+  @media (max-width: 1199.98px) {
+    padding-top: 80px;
+  }
+  @media (max-width: 575.98px) {
+    padding-top: 30px;
+  }
+
+  .nav {
+    li {
+      padding-bottom: 80px;
+    }
+    a {
+      color: $secondary;
+      padding: 0 30px 10px;
+      position: relative;
+      letter-spacing: 4px;
+      line-height: 30px;
+      @include fonts($font-muted, 14px, 900);
+      &.active,
+      &:hover {
+        color: $dark;
+        &::before {
+          content: "";
+          background-color: $dark;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          position: absolute;
+        }
+      }
+    }
+    @media (max-width: 991.98px) {
+      li {
+        padding-bottom: 40px;
+      }
+      a {
+        letter-spacing: normal;
+        padding: 0 15px 5px;
+      }
+    }
+    @media (max-width: 575.98px) {
+      li {
+        padding-bottom: 20px;
+      }
+      a {
+        font-size: 10px;
+        letter-spacing: normal;
+      }
+    }
+  }
+  &-boxes {
+    padding: 0 $p-6 66px;
+    @extend .row, .mx-0;
+    @media (max-width: 1199.98px) {
+      padding-bottom: 30px;
+    }
+    @media (max-width: 575.98px) {
+      padding: 0 0 10px;
+    }
+  }
+  &-box {
+    position: relative;
+    @extend .col-6, .col-md-3, .px-0;
+    &:nth-child(1),
+    &:nth-child(3),
+    &:nth-child(6),
+    &:nth-child(8) {
+      background-color: #e2e8e8;
+    }
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(7) {
+      background-color: #d3dcdc;
+    }
+    .talent-icon {
+      display: none;
+      position: absolute;
+      margin: 21px;
+      top: 0;
+      right: 0;
+      height: 56px;
+      width: 56px;
+      border-radius: 50%;
+      background-color: #b4d3d3;
+      font-size: 18px;
+      color: $white;
+      transform: rotate(-45deg);
+    }
+    img {
+      @extend .img-fluid;
+    }
+    &:hover {
+      background-color: #2e2f34;
+      img {
+        filter: brightness(0.25);
+      }
+      .talent-icon {
+        @extend .d-flex, .justify-content-center, .align-items-center;
+      }
+      .talent-text {
+        display: block;
+      }
+    }
+  }
+
+  &-text {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    p {
+      &:first-child {
+        padding-bottom: 12px;
+        line-height: 4px;
+        color: $white;
+        @include fonts($font-text, 30px);
+      }
+      &:last-child {
+        padding-bottom: 50px;
+        line-height: 4px;
+        color: #aeaeb7;
+        text-transform: uppercase;
+        @include fonts($font-muted, 12px);
+      }
+    }
+  }
+
+  a {
+    &.btn {
+      margin-bottom: 72px;
+      letter-spacing: 4px;
+      border-radius: 31.5px;
+      padding: 20px 42px;
+      @include fonts($font-muted, 14px, 900);
+      @extend .btn-primary, .text-white;
+      @media (max-width: 991.98px) {
+        padding: 10px 20px;
+        margin-bottom: 54px;
+      }
+      @media (max-width: 575.98px) {
+        margin-bottom: 36px;
+      }
+    }
+  }
+}

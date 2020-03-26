@@ -1,0 +1,216 @@
+/* *****************
+        HERO
+********************/
+.hero {
+  padding-top: 270px;
+  @extend .position-relative;
+
+  @media (max-width: 1199.98px) {
+    padding-top: 170px;
+  }
+  @media (max-width: 575.98px) {
+    padding-top: 80px;
+  }
+
+  .row {
+    @extend .px-0, .mx-0;
+  }
+  .icons {
+    @extend .col, .col-sm-1, .px-0, .position-relative;
+    .col-1 {
+      padding: 0;
+    }
+    i {
+      padding: 0 0 40px 0;
+      @extend .col-12, .mx-0, .pl-0;
+    }
+    .line {
+      width: 2px;
+      height: 60px;
+      margin: 160px 0 70px 5px;
+      background-color: $dark;
+    }
+    p {
+      padding-left: 0;
+      transform: rotate(-90deg);
+    }
+    .hero-btn {
+      left: 0;
+      bottom: 0;
+      color: $white;
+      padding: 45px 52px;
+      letter-spacing: 4px;
+      white-space: pre;
+      background-color: $primary;
+      @include fonts($text-muted, 14px, 800);
+      @extend .position-absolute;
+    }
+    @media (max-width: 1199.98px) {
+      i {
+        padding-bottom: 20px;
+      }
+      .line {
+        margin: 70px 0 30px 5px;
+      }
+      .hero-btn {
+        padding: 20px 30px;
+      }
+    }
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
+  &-title {
+    @extend .col-11, .col-sm-9, .position-relative, .px-0;
+    h2 {
+      line-height: 100px;
+      width: min-content;
+      padding: 250px 0 0 35px;
+      margin-bottom: 55px;
+      @include fonts($font-text, 101px);
+      @extend .position-relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 56px;
+        height: 7px;
+        background-color: $white;
+      }
+    }
+    p {
+      line-height: 30px;
+      padding: 0 0 250px 35px;
+      @include fonts($font-muted, 17px, 600);
+    }
+    a {
+      padding: 38px;
+      background-color: $white;
+      left: 110px;
+      bottom: 0;
+
+      @include fonts($text-muted, 14px, 800);
+      @extend .position-absolute;
+      img {
+        color: $dark;
+      }
+    }
+    .hero-img {
+      bottom: 0;
+      right: 120px;
+      z-index: -1;
+      @extend .position-absolute, .mx-auto;
+      img {
+        @extend .img-fluid;
+      }
+    }
+    @media (min-width: 1200px) {
+      h2 {
+        white-space: pre-line;
+      }
+    }
+
+    @media (max-width: 1199.98px) {
+      h2 {
+        font-size: 75px;
+        padding: 100px 0 0 30px;
+      }
+      p {
+        padding: 0 0 100px 30px;
+      }
+      a {
+        display: none;
+      }
+    }
+    @media (max-width: 575.98px) {
+      h2 {
+        line-height: normal;
+        font-size: 50px;
+        padding-top: 0;
+        margin-bottom: 0;
+      }
+      p {
+        padding-bottom: 0;
+      }
+      .hero-img {
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        position: relative;
+      }
+    }
+  }
+
+  &-list {
+    padding-top: 540px;
+    @extend .col-1, .col-sm-2, .px-0;
+    ul {
+      padding-left: 0;
+    }
+    li {
+      padding-bottom: 30px;
+      @include fonts($font-muted, 12px, 800);
+    }
+    a {
+      padding-right: 156px;
+      color: $secondary;
+      text-decoration: none;
+      @extend .position-relative;
+      &::before {
+        content: "";
+        width: 56px;
+        height: 0;
+        background-color: $dark;
+        bottom: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        transition: all 0.3s ease-in-out;
+        @extend .position-absolute;
+      }
+      &:hover {
+        color: $dark;
+        &::before {
+          height: 2px;
+        }
+      }
+      &.active {
+        color: $dark;
+        &::before {
+          height: 2px;
+        }
+      }
+    }
+    @media (max-width: 1199.98px) {
+      padding-top: 300px;
+      a {
+        padding-right: 100px;
+      }
+    }
+    @media (max-width: 575.98px) {
+      padding: 100px 5px 0;
+      a {
+        padding-right: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-img-floating {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    img {
+      @extend .img-fluid;
+    }
+    @media (max-width: 1199.98px) {
+      width: 40%;
+    }
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
+}

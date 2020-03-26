@@ -4,13 +4,14 @@
 .main-header {
   width: 100%;
   z-index: 9999;
+  padding: 56px 0;
   @extend .position-absolute;
+  .row {
+    @extend .position-relative;
+  }
   .navbar {
-    @extend .navbar-light, .bg-transparent, .position-relative;
+    @extend .navbar-light, .bg-transparent;
 
-    &-brand {
-      // @extend .order-2;
-    }
     &-collapse {
       @extend .collapse;
     }
@@ -18,7 +19,24 @@
       @extend .mr-auto;
     }
   }
-  .collapse {
-    // @extend .order-1;
+  div.nav {
+    a {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+  .logo {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @extend .position-absolute, .mx-auto;
+  }
+  .search {
+    @extend .float-right;
+  }
+  @media (max-width: 991.98px) {
+    div.nav {
+      display: none;
+    }
   }
 }
